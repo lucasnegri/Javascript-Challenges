@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scizzors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="bg-dark text-secondary px-4 pb-5 pt-5 text-center ">
+            <div class="py-5">
+                <h1 class="display-5 fw-bold text-white">Rock Paper Scissors!</h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="fs-5 mb-4">Game against the computer. Project made to improve my JavaScript knowledge, while implementing it to the DOM. <br><br>Rules: A draw isnt considered. The game has 10 rounds. Good lucky.</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-5">
+                        <button type="button" class="btn btn-outline-light btn-lg px-4" id="rock">Rock</button>
+                        <button type="button" class="btn btn-outline-light btn-lg px-4" id="paper">Paper</button>
+                        <button type="button" class="btn btn-outline-light btn-lg px-4" id="scissor">Scissors</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-dark text-secondary px-4 pb-5 text-center ">
+            <div class="py-5">
+                <h3 class="display-3 result">Result Here</h3>
+            </div>
+        </div>
+        
+        <div class="bg-dark text-secondary px-4  text-center ">
+            <div class="py-5">
+                <h1 class="display-6 fw-normal text-white">Score</h1>
+                <div class="col-lg-6 mx-auto">
+                    <h5 class="">Your points: <div class="pScore">0</div></h5>
+                    <h5 class="">Computer Points: <div class="cScore">0</div></h5>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
