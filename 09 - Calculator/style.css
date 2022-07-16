@@ -1,0 +1,29 @@
+html {
+    text-align: center;
+    font-family: Monaco;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#display{
+    display: inline-block;
+}
+
+#buttons{
+    width: auto;
+}
+.row{
+    height: 0.33fr;
+    width: 1fr;
+}
+.col{
+    height: 1fr;
+    width: 0.25fr;
+    margin: auto;
+}
+
