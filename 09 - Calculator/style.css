@@ -9,10 +9,11 @@ html {
     align-items: center;
 }
 
-
-#display{
-    display: inline-block;
+#calculator{
+    width:400px; 
+    height:450px;
 }
+
 
 #buttons{
     width: auto;
