@@ -29,8 +29,10 @@ html {
         border: none;
         background-color: #252525;
         color: #fff;
-        text-align: right;       
+        text-align: right;
+        padding-right: 2rem;   
         font-size: 4rem;
+        
     }
 
         button {
@@ -40,7 +42,7 @@ html {
 
     .equal-sign {
         height: 98%;
-        grid-area: 3 / 4 / 6 / 5;
+        grid-area: 3 / 4 / 7 / 5;
     }
 
     .calculator-keys {
