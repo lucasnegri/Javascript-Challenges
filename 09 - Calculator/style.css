@@ -42,7 +42,7 @@ html {
 
     .equal-sign {
         height: 98%;
-        grid-area: 1 / 4 / 7 / 5;
+        grid-area: 3 / 4 / 7 / 5;
     }
 
     .calculator-keys {

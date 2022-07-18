@@ -66,7 +66,35 @@ function displayData(e) {
     }
 }
 
-function calculate() {
+function calculate() {   
+    if (firstOperand && !secondOperand){
+        let firstNum = Number(firstOperand);
+        if (operator === "frac") {
+            result = 1 / firstNum;
+            operator = 'frac';
+            text.value = result;
+        } else if (operator === "square") {
+            result = Math.pow(firstNum, 2)
+            operator = "²"
+            text.value = result;
+        }
+        
+        result = result.toString();
+        if (result.includes(".")) {
+            result = Number(result).toFixed(2);
+        }
+        if (result.includes("e")) {
+            result = Number(result).toPrecision(3);
+        }
+
+        text.value = `${firstOperand} ${operator} `;
+        output.value = result;
+        firstOperand = result;
+        operator = undefined;
+        decimal = false;
+        lengthCheck(result);
+    } 
+    
     if (firstOperand && secondOperand) {
         let firstNum = Number(firstOperand);
         let secondNum = Number(secondOperand);
@@ -77,20 +105,20 @@ function calculate() {
         } else if (operator === "x") {
             result = firstNum * secondNum;
         } else if (operator === "÷") {
-            result = firstNum / secondNum;
-            if (secondNum === 0) danger = true;
+            if(secondNum === 0){
+                output.value ="Can't divide by zero";
+                return
+            } else {
+                result = firstNum / secondNum;
+            }
+            
         } else if (operator === "%") {
-            result = firstNum % secondNum;
+            result = (firstNum/100) * secondNum
         } else if (operator === "^") {
             result = firstNum ** secondNum;
-        }
+        } 
         
-        if (danger) {
-            dangerAnimation();
-            return;
-        }
-
-        result = result.toString();
+            result = result.toString();
         if (result.includes(".")) {
             result = Number(result).toFixed(2);
         }
@@ -118,7 +146,6 @@ function clearAll() {
     text.value = '';
     output.value = 0;
     output.classList.remove("result-small");
-    title.classList.remove("danger");
 }
 
 function lengthCheck(input) {
@@ -129,20 +156,3 @@ function lengthCheck(input) {
     }
 }
 
-function dangerAnimation() {
-    let intervalID;
-    removeEvents();
-    text.value = "";
-    output.value = "";
-    intervalID = setInterval(() => {
-        output.innerText += "😠";
-        title.classList.toggle("danger");
-    }, 150);
-    calculator.classList.add("animate__hinge");
-    calculator.addEventListener("animationend", () => {
-        calculator.classList.remove("animate__hinge");
-        clearInterval(intervalID);
-        clearAll();
-        addEvents();
-    });
-}
