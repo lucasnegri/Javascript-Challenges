@@ -14,44 +14,41 @@
     <div class="page">
         <h1 class="display-1 mt-5 pt-5 pb-3">Calculator</h1>
         <div class="container d-flex justify-content-center mt-5">
-            <div class="calculator card mt-5">
+            <div class="calc card mt-5">
                 
                 <div class="screen-area">
-                    <input type="text" class="calculator-screen z-depth-1" value="" disabled="">
-                    
+                    <input type="text" class="calculator-screen calc__text text-secondary" value="" disabled="">
+                    <input type="text" class="calculator-screen calc__result" value="" disabled="">
                 </div>
             
                 <div class="calculator-keys ">
-                    <button type="button" class="operator btn btn-warning waves-effect waves-light shadow-lg" value="fraction">&sup1;/ ₓ</button>
-                    <button type="button" class="operator btn btn-warning waves-effect waves-light shadow-lg" value="**">x&sup2;</button>
-                    <button type="button" class="operator btn btn-warning waves-effect waves-light shadow-lg" value="square">&radic;</button>
-                    <button type="button" class="operator btn btn-warning waves-effect waves-light shadow-lg" value="%">%</button>
+                    <button type="button" class="op btn btn-warning waves-effect waves-light shadow-lg" value="^">x^</button>
+                    <button type="button" class="op btn btn-warning waves-effect waves-light shadow-lg" value="%">%</button>
+                    <button type="button" class="op btn btn-warning waves-effect waves-light shadow-lg" value="÷">÷</button>
                     
-                    <button type="button" class="operator btn btn-warning waves-effect waves-light shadow-lg" value="/">÷</button>
-                    <button type="button" class="operator btn btn-warning waves-effect waves-light shadow-lg" value="*">×</button>
-                    <button type="button" class="operator btn btn-warning waves-effect waves-light shadow-lg" value="-">-</button>
-                    <button type="button" class="operator btn btn-warning waves-effect waves-light shadow-lg" value="+">+</button>
+                    <button type="button" class="op btn btn-warning waves-effect waves-light shadow-lg" value="x">×</button>
+                    <button type="button" class="op btn btn-warning waves-effect waves-light shadow-lg" value="-">-</button>
+                    <button type="button" class="op btn btn-warning waves-effect waves-light shadow-lg" value="+">+</button>
                 
-                    <button type="button" value="7" class="btn btn-default waves-effect shadow">7</button>
-                    <button type="button" value="8" class="btn btn-default waves-effect shadow">8</button>
-                    <button type="button" value="9" class="btn btn-default waves-effect shadow">9</button>
-                    
+                    <button type="button" value="7" class="digit btn btn-default waves-effect shadow">7</button>
+                    <button type="button" value="8" class="digit btn btn-default waves-effect shadow">8</button>
+                    <button type="button" value="9" class="digit btn btn-default waves-effect shadow">9</button>
                 
-                    <button type="button" value="4" class="btn btn-default waves-effect shadow">4</button>
-                    <button type="button" value="5" class="btn btn-default waves-effect shadow">5</button>
-                    <button type="button" value="6" class="btn btn-default waves-effect shadow">6</button>
+                    <button type="button" value="4" class="digit btn btn-default waves-effect shadow">4</button>
+                    <button type="button" value="5" class="digit btn btn-default waves-effect shadow">5</button>
+                    <button type="button" value="6" class="digit btn btn-default waves-effect shadow">6</button>
                 
                 
-                    <button type="button" value="1" class="btn btn-default waves-effect shadow">1</button>
-                    <button type="button" value="2" class="btn btn-default waves-effect shadow">2</button>
-                    <button type="button" value="3" class="btn btn-default waves-effect shadow">3</button>
+                    <button type="button" value="1" class="digit btn btn-default waves-effect shadow">1</button>
+                    <button type="button" value="2" class="digit btn btn-default waves-effect shadow">2</button>
+                    <button type="button" value="3" class="digit btn btn-default waves-effect shadow">3</button>
                 
                 
-                    <button type="button" class="all-clear function btn btn-secondary btn-sm waves-effect waves-light shadow-lg" value="all-clear">AC</button>
-                    <button type="button" value="0" class="btn btn-default waves-effect shadow">0</button>
-                    <button type="button" class="decimal function btn btn-secondary waves-effect waves-light shadow-lg" value=".">.</button>
+                    <button type="button" class="all-clear function btn btn-secondary btn-sm waves-effect waves-light shadow-lg" value="all-clear">C</button>
+                    <button type="button" value="0" class="digit btn btn-default waves-effect shadow">0</button>
+                    <button type="button" class="digit decimal function btn btn-secondary waves-effect waves-light shadow-lg" value=".">.</button>
                 
-                    <button type="button" class="equal-sign operator btn btn-default waves-effect waves-light shadow-lg" value="=">=</button>
+                    <button type="button" class="equal-sign btn btn-default waves-effect waves-light shadow-lg" value="=">=</button>
                 </div>
             </div>
         </div>
