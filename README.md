@@ -6,3 +6,13 @@ https://github.com/TheOdinProject/javascript-exercises#readme
 
 There is other exercises that i got from here, a 30day challenge JS Plan:
 https://github.com/wesbos/JavaScript30
+
+Here is the Live Version of the projects : 
+
+https://codepen.io/lucasnegri/pen/eYMvrJP
+
+
+| Project       | Live Code     |
+| ------------- | ------------- | 
+| Calculator    | [Test1](https://codepen.io/lucasnegri/pen/eYMvrJP)         | 
+| `Bob`         | Test2         | 
