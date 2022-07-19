@@ -27,19 +27,19 @@ makeGrid()
 document.querySelector("#bg-dark").addEventListener("click", function(e) {
     color = 'bg-dark';
 });
-document.querySelector("#bg-white").addEventListener("click", function(e) {
+document.querySelector("#bg-light").addEventListener("click", function(e) {
     color = 'bg-light';
 });
-document.querySelector("#bg-blue").addEventListener("click", function(e) {
+document.querySelector("#bg-info").addEventListener("click", function(e) {
     color = 'bg-info';
 });
-document.querySelector("#bg-red").addEventListener("click", function(e) {
+document.querySelector("#bg-danger").addEventListener("click", function(e) {
     color = 'bg-danger';
 });
-document.querySelector("#bg-green").addEventListener("click", function(e) {
+document.querySelector("#bg-success").addEventListener("click", function(e) {
     color = 'bg-success';
 });
-document.querySelector("#bg-yellow").addEventListener("click", function(e) {
+document.querySelector("#bg-warning").addEventListener("click", function(e) {
     color = 'bg-warning';
 });
 
