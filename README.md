@@ -12,7 +12,12 @@ Here is the Live Version of the projects :
 https://codepen.io/lucasnegri/pen/eYMvrJP
 
 
-| Project       | Live Code     |
-| ------------- | ------------- | 
-| Calculator    | [Test1](https://codepen.io/lucasnegri/pen/eYMvrJP)         | 
-| `Bob`         | Test2         | 
+| Project           | Live Code     |
+| -------------     | ------------- |  
+| Clock             | [Try](https://codepen.io/lucasnegri/pen/MWVpGmP)      | 
+| Calculator        | [Try](https://codepen.io/lucasnegri/pen/eYMvrJP)      | 
+| RockPaperScissor  | [Try](https://codepen.io/lucasnegri/pen/yLKMjVq)      | 
+| Flex Image Panel  | [Try](https://codepen.io/lucasnegri/pen/wvmJjpp)      | 
+| Temperature Conversion  | [Try](https://codepen.io/lucasnegri/pen/ExEWLEY)| 
+| Etch-a-Sketch     | [Try](https://codepen.io/lucasnegri/pen/abYJGGb)      | 
+
