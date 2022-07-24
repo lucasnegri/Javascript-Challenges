@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Form Class</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container pt-5 .justify-content-center">
+        <form>
+            <h1 class="display-2 text-center fw-light p-4">Form Validation Class</h1>
+            <section class="p-4">
+                
+                <fieldset class="card w-100">
+                    <div class="card-header bg-primary">
+                        <legend class="h4 text-white">Specialization</legend>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="pt-1 mb-2">
+                                <label for="specialization_1">
+                                    <input class="form-check-input" type="radio" id="specialization_1" name="spec" value="front" checked>
+                                    Front-End
+                                </label>
+                            </li>
+                            <li class="pt-1 mb-2">
+                                <label for="specialization_2">
+                                    <input class="form-check-input" type="radio" id="specialization_2" name="spec" value="back">
+                                    Back-End
+                                </label>
+                            </li>
+                            <li class="pt-1">
+                                <label for="specialization_3">
+                                    <input class="form-check-input" type="radio" id="specialization_3" name="spec" value="full">
+                                    Fullstack
+                                </label>
+                            </li>
+                    </div>
+                </fieldset>
+                
+                <fieldset class="card w-100 mt-5">
+                    <div class="card-header bg-primary">
+                        <legend class="h4 text-white">Account info</legend>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="name">Name</span>
+                            <input class="input-group-text w-75 bg-white" type="text" id="name" name="username" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="age">Age</span>
+                            <input class="input-group-text w-75 bg-white" type="number" id="age" name="age" required pattern="^[0-1]{1}[0-9]{0,2}$">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="email">Email</span>
+                            <input class="input-group-text w-75 bg-white" type="email" id="email" name="usermail" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="pwd">Password</span>
+                            <input class="input-group-text w-75 bg-white" type="password" id="pwd" name="password" required>
+                        </div>               
+                </fieldset>
+
+
+
+
+                <fieldset class="card w-100  mt-5">
+                    <div class="card-header bg-primary">
+                        <legend class="h4 pt-3 text-white">Card Info</legend>
+                    </div>
+                    <div class="card-body">
+                        
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="card">Card Type</label>
+                            <select class="form-select" id="card">
+                                <option selected>Choose...</option>
+                                <option value="visa">Visa</option>
+                                <option value="mc">Mastercard</option>
+                                <option value="nubank">Nubank</option>
+                                <option value="bb">Banco Brasil</option>
+                                <option value="itau">Itau</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="number">Card Number</span>
+                            <input type="text" class="input-group-text w-50 bg-white" id="number" required pattern="^(0|[1-9][0-9]*)$">
+                        </div>
+                        
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="expiration">Expiration</span>
+                            <input type="text" class="input-group-text w-50 bg-white" id="expiration" required placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$">
+                        </div>
+                        
+                    </div>
+                </fieldset>    
+            
+                <div class="pt-1 input-group w-50 m-auto">
+                    <button type="submit" class="btn btn-primary btn-lg mt-5">Submit my Form</button>
+                </div>
+            </section>
+        </form>
+        
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
