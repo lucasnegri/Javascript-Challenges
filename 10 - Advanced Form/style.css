@@ -10,12 +10,12 @@
 
 html, body {
     height: 100%;
-    background-color: #1b1b36;
+    background-color: #b8cfdd;
     overflow: hidden;
 }
 
 .form-items {
-    background-color: #3e4275;
+    background-color: #729CFA;
 }
 
 
@@ -168,7 +168,12 @@ html, body {
     color: #2acc80;
 }
 
-.tab{
-    display: none;
+.hidden{
+  display: none;
 }
+
+.active {
+  display: block;
+}
+
 
