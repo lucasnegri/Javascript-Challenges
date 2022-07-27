@@ -1,41 +1,73 @@
 
 //Form Steps//
 
-function next_step() {
-    document.getElementById("first").classList.add('hidden')
-    document.getElementById("first").classList.remove('active');
-    document.getElementById("second").classList.add('active');
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+    var x = document.getElementsByClassName("tab");
+    x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+    if (n == 0) {
+    document.getElementById("btnPrev").style.display = "none";
+    } else {
+    document.getElementById("btnPrev").style.display = "inline";
+    }
+    if (n == (x.length - 1)) {
+    document.getElementById("btnNext").innerHTML = "Submit";
+    
+    } else {
+    document.getElementById("btnNext").innerHTML = "Next";
+    }
+  // ... and run a function that displays the correct step indicator:
+    fixStepIndicator(n)
 }
 
-function prev_step1() {
-    document.getElementById("second").classList.remove('active');
-    document.getElementById("second").classList.add('hidden');
-    document.getElementById("first").classList.add('active');
+function nextPrev(n) {
+  // This function will figure out which tab to display
+    var x = document.getElementsByClassName("tab");
+    x[currentTab].style.display = "none";
+    currentTab = currentTab + n;
+
+    // if you have reached the end of the form... :
+    if (currentTab >= x.length) {
+    //...the form gets submitted:
+        document.getElementById("myForm").submit();
+        return false;
+    }
+  // Otherwise, display the correct tab:
+    showTab(currentTab);
 }
 
-function next_step1() {
-    document.getElementById("second").classList.add('hidden')
-    document.getElementById("second").classList.remove('active');
-    document.getElementById("third").classList.add('active');
+function validateForm() {
+  // This function deals with validation of the form fields
+    var x, y, i, valid = true;
+    x = document.getElementsByClassName("tab");
+    y = x[currentTab].getElementsByTagName("input");
+  // A loop that checks every input field in the current tab:
+    for (i = 0; i < y.length; i++) {
+    // If a field is empty...
+        if (y[i].value == "") {
+        // add an "invalid" class to the field:
+        y[i].className += " invalid";
+        // and set the current valid status to false:
+        valid = false;
+        }
+    }
+    // If the valid status is true, mark the step as finished and valid:
+    if (valid) {
+        document.getElementsByClassName("step")[currentTab].className += " finish";
+    }
+    return valid; // return the valid status
 }
 
-function prev_step2() {
-    document.getElementById("third").classList.remove('active');
-    document.getElementById("third").classList.add('hidden');
-    document.getElementById("second").classList.add('active');
+function fixStepIndicator(n) {
+    // This function removes the "active" class of all steps...
+    var i, x = document.getElementsByClassName("step");
+    for (i = 0; i < x.length; i++) {
+        x[n].className = x[n].className.replace(" active", "");
+    }
+    //... and adds the "active" class to the current step:
+        x[n].className += " active";
 }
-
-function next_step2() {
-    document.getElementById("third").classList.add('hidden')
-    document.getElementById("third").classList.remove('active');
-    document.getElementById("fourth").classList.add('active');
-}
-
-function prev_step3() {
-    document.getElementById("fourth").classList.remove('active');
-    document.getElementById("fourth").classList.add('hidden');
-    document.getElementById("third").classList.add('active');
-}
-
-
-

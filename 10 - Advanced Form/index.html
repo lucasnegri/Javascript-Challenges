@@ -20,78 +20,65 @@
                 <div class="form-content">
                     <div class="form-items shadow-lg">
                         <form id="myForm" class="requires-validation">
-                            <div id="first" class="tab active">
+                            <div class="d-flex justify-content-center mb-5 gap-3">
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                            </div>
+                            
+                            <div class="tab">
                                 <div class="form-header d-flex flex-column justify-content-center align-items-center">
-                                    <i id='phase' class="bi bi-1-circle display-5 pb-2"></i>
+                                    <i class="bi bi-1-circle display-5 pb-2 phase"></i>
                                     <h3 class="display-5 pt-3 pb-4">Create Account</h3>
                                 </div>
                                     <p>Fill <u>all</u> the data below.</p>
+                                
                                 <fieldset>
                                     <label class="h5">Account Info</label>
-                                    <div class="col-md-12 d-flex gap-1">
-                                        <input class="form-control first-input" type="text" name="name" minlength="5" maxlength="35" placeholder="Full Name" required>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <input class="form-control first-input" type="email" name="email" placeholder="E-mail Address" required>
-                                    </div>
                                     
                                     <div class="col-md-12">
-                                        <input class="form-control first-input" type="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                                        title="Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character" required>
-                                    </div>
-                                    <div class="col-md-12 mt-3">
-                                        <label class="mb-3 mr-1" for="gender">Gender: </label>
-                                        <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off">
-                                        <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
-                                        <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off">
-                                        <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
-                                        <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off">
-                                        <label class="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
+                                        <input class="form-control" type="text" name="name" minlength="5" maxlength="35" placeholder="Full Name" required>
+                                        <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+                                        <input class="form-control" type="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                        title="Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character">
+                                        <div class="col-md-12 mt-3">
+                                            <label class="mb-3 mr-1" for="gender">Gender: </label>
+                                            <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off">
+                                            <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+                                            <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off">
+                                            <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+                                            <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off">
+                                            <label class="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
+                                        </div>
                                     </div>
                                 </fieldset>                                                              
-                                <div class="form-button mt-4 d-flex justify-content-center ">
-                                    <button id="btnNext" type="button" onclick="next_step()" class="btn btn-light text-dark shadow btn-next">Next</button>
-                                </div>
                             </div>
 
-                            <div id="second" class="tab hidden">
+                            <div class="tab">
                                 <div class="form-header d-flex flex-column justify-content-center align-items-center">
-                                    <i id='phase' class="bi bi-2-circle display-5 pb-2"></i>
+                                    <i class="bi bi-2-circle display-5 pb-2 phase"></i>
                                     <h3 class="display-5 pt-3 pb-4">Address Info</h3>
                                 </div>
                                 <fieldset class="pt-2">
                                     <label class="h5">Address Info</label>
                                     <div class="col-md-12">
-                                        <input class="form-control" type="text" name="zip" placeholder="Zip code" required>
-                                        <div class="col-md-12">
-                                            <input class="form-control" type="text" name="city" placeholder="City" required>
+                                        <input class="form-control" type="text" name="zip" placeholder="Zip code">
+                                        <input class="form-control" type="text" name="city" placeholder="City">
+                                        <input class="form-control" type="text" name="address" placeholder="Address Line">
+                                        <input class="form-control" type="text" name="country" placeholder="Country">
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="confirmData">
+                                            <label class="form-check-label">I confirm that all data are correct</label>
+                                            <!-- <div class="invalid-feedback">Please confirm that the entered data are all correct!</div> -->
                                         </div>
                                     </div>
-                                    
-                                    <div class="col-md-12">
-                                        <input class="form-control" type="text" name="address" placeholder="Address Line" required>
-                                    </div>
-                                
-                                <div class="col-md-12">
-                                    <input class="form-control" type="text" name="country" placeholder="Country" required>
-                                </div>
-                                
-                                <div class="form-check mt-2">
-                                    <input class="form-check-input" type="checkbox" value="" id="confirmData">
-                                    <label class="form-check-label">I confirm that all data are correct</label>
-                                    <!-- <div class="invalid-feedback">Please confirm that the entered data are all correct!</div> -->
-                                </div>
-                            </fieldset>
-                            
-                            <div class="form-button mt-4 d-flex justify-content-center gap-3">
-                                <button id="btnPrev1" type="button" onclick="prev_step1()" class="btn btn-light text-dark shadow">Return</button>
-                                <button id="btnNext1" type="button" onclick="next_step1()"class="btn btn-light text-dark shadow btn-next">Next</button>
+                                </fieldset>
                             </div>
-                        </div>
                         
-                        <div id="third" class="tab hidden">
+                            <div class="tab">
                                 <div class="form-header d-flex flex-column justify-content-center align-items-center">
-                                    <i id='phase' class="bi bi-3-circle display-5 pb-2"></i>
+                                    <i class="bi bi-3-circle display-5 pb-2 phase"></i>
                                     <h3 class="display-5 pt-3 pb-4">Payment Details</h3>
                                 </div>
                                 <fieldset class="pt-3">
@@ -105,39 +92,20 @@
                                             <option value="american">American Express</option>
                                             <option value="nubank">Nubank</option>
                                         </select>
-                                        <!-- <div class="valid-feedback">You selected a type!</div>
-                                        <div class="invalid-feedback">Please select a type!</div> -->
-                                    </div>
-                                    <div class="col-md-12">
                                         <input class="form-control" type="text" name="cardNum" placeholder="Card number" required>
-                                        <!-- <div class="valid-feedback">Card Number field is valid!</div>
-                                        <div class="invalid-feedback">Card Number cannot be blank!</div> -->
-                                    </div>
-                                    <div class="col-md-12">
                                         <input class="form-control" type="text" name="cardExp" placeholder="Expiration" required>
-                                        <!-- <div class="valid-feedback">Expiration field is valid!</div>
-                                        <div class="invalid-feedback">Expiration field cannot be blank!</div> -->
-                                    </div>
-                                    <div class="col-md-12">
                                         <input class="form-control" type="text" name="cardCVV" placeholder="CVV" maxlenght="3" required>
-                                        <!-- <div class="valid-feedback">CVV field is valid!</div>
-                                        <div class="invalid-feedback">CVV field cannot be blank!</div> -->
-                                    </div>
-                                    <div class="form-check mt-2">
-                                        <input class="form-check-input" type="checkbox" value="" id="saveInfo">
-                                        <label class="form-check-label">Save my information for future payments!</label>
-                                    </div>
-                                    
-                                    <div class="form-button mt-4 d-flex justify-content-center gap-3">
-                                        <button id="btnPrev2" type="button" onclick="prev_step2()" class="btn btn-light text-dark shadow">Return</button>
-                                        <button id="btnNext2" type="button" onclick="next_step2()" class="btn btn-light text-dark shadow btn-next">Next</button>
+                                        <div class="form-check mt-2">
+                                            <input class="form-check-input" type="checkbox" value="" id="saveInfo">
+                                            <label class="form-check-label">Save my information for future payments!</label>
+                                        </div>
                                     </div>
                                 </fieldset>
                             </div>
 
-                            <div id="fourth" class="tab hidden">
+                            <div class="tab">
                                 <div class="form-header d-flex flex-column justify-content-center align-items-center">
-                                    <i id='phase' class="bi bi-4-circle display-5 pb-2"></i>
+                                    <i class="bi bi-4-circle display-5 pb-2 phase"></i>
                                     <h3 class="display-5 pt-3 pb-4">Knowledge Check</h3>
                                 </div>
                                 <fieldset class="pt-4">
@@ -152,31 +120,29 @@
                                             <option value="full">Data Server</option>
                                             <option value="full">DevOps</option>
                                         </select>
-                                        <!-- <div class="valid-feedback">You selected a position!</div>
-                                        <div class="invalid-feedback">Please select a position!</div> -->
-                                    </div>
-                                    <div class="col-md-12 mt-3 d-flex flex-column">
-                                        <label for="formControlRange">Front-end</label>
-                                        <input type="range" class="form-range" value="" name="html">
-                                    </div>
-                                    <div class="col-md-12 mt-3 d-flex flex-column">
-                                        <label for="formControlRange">Back-end</label>
-                                        <input type="range" class="form-range" value="" name="css">
-                                    </div>
-                                    <div class="col-md-12 mt-3 d-flex flex-column">
-                                        <label for="formControlRange">Data Server</label>
-                                        <input type="range" class="form-range" value="" name="javascript">
-                                    </div>
-                                    <div class="col-md-12 mt-3 d-flex flex-column">
-                                        <label for="formControlRange">Cyber Security</label>
-                                        <input type="range" class="form-range" value="" name="javascript">
+                                        <div class="col-md-12 mt-3 d-flex flex-column">
+                                            <label for="formControlRange">Front-end</label>
+                                            <input type="range" class="form-range" value="" name="html">
+                                        </div>
+                                        <div class="col-md-12 mt-3 d-flex flex-column">
+                                            <label for="formControlRange">Back-end</label>
+                                            <input type="range" class="form-range" value="" name="css">
+                                        </div>
+                                        <div class="col-md-12 mt-3 d-flex flex-column">
+                                            <label for="formControlRange">Data Server</label>
+                                            <input type="range" class="form-range" value="" name="javascript">
+                                        </div>
+                                        <div class="col-md-12 mt-3 d-flex flex-column">
+                                            <label for="formControlRange">Cyber Security</label>
+                                            <input type="range" class="form-range" value="" name="javascript">
+                                        </div>
                                     </div>
                                         
-                                    <div class="form-button mt-4 d-flex justify-content-center gap-3">
-                                        <button id="btnPrev3" type="button" onclick="prev_step3()" class="btn btn-light text-dark shadow">Return</button>
-                                        <button id="btnNext3" type="button" class="btn btn-light text-dark shadow btn-next">Submit</button>
-                                    </div>
                                 </fieldset>
+                            </div>
+                            <div class="form-button mt-4 d-flex justify-content-center gap-3">
+                                <button id="btnPrev" type="button" onclick="nextPrev(-1)" class="btn btn-light text-dark shadow">Return</button>
+                                <button id="btnNext" type="button" onclick="nextPrev(1)" class="btn btn-light text-dark shadow">Submit</button>
                             </div>
                         </form>
                     </div>

@@ -99,18 +99,11 @@ html, body {
     margin-bottom: 30px;
 }
 
-#phase{
+.phase{
     color: #fff;
     display: flex;
     font-size: calc(1.425rem + 2.1vw);
     font-weight: 300;
-}
-
-.form-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 25px;
 }
 
 .form-content p {
@@ -121,7 +114,6 @@ html, body {
     line-height: 20px;
     margin-bottom: 30px;
 }
-
 
 .form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
     color: #fff;
@@ -143,7 +135,6 @@ html, body {
     margin-top: 16px;
 }
 
-
 .form-content textarea {
     position: static !important;
     width: 100%;
@@ -163,20 +154,6 @@ html, body {
     margin-bottom: 14px;
 }
 
-
-
-.hidden{
-    transition: opacity 1s ease-out;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-}
-
-.active {
-    opacity: 1;
-    height: auto;
-}
-
 .btn-outline-secondary {
     --bs-btn-color: #1f79c9;
     --bs-btn-border-color: #ffffff;
@@ -193,6 +170,28 @@ html, body {
     --bs-btn-disabled-border-color: #6c757d;
     --bs-gradient: none;
 }
+
+.tab{
+    display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.7;
+}
+
+.step.active {
+    background-color: #ebebeb;
+}
+
+
 
 
 
