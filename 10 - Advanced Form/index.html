@@ -4,148 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Form Class</title>
     <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>Advanced Form Class</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--Background Div's-->
     <div class="main__bg"></div>
     <div class="main__bg layer1"></div>
     <div class="main__bg layer2"></div>
+    
+    
     <div class="form-body">
-        <div class="row">
             <div class="form-holder">
                 <div class="form-content">
-                    <div class="form-items shadow-lg">
-                        <form id="myForm" class="requires-validation">
-                            <div class="d-flex justify-content-center mb-5 gap-3">
-                                <span class="step"></span>
-                                <span class="step"></span>
-                                <span class="step"></span>
-                                <span class="step"></span>
+                    <div id='form-items' class="shadow-lg">
+                        <form id="myForm" class="needs-validation">
+                        
+                        <!--STEP BAR-->
+                        <div class="d-flex justify-content-center mb-5 gap-3">
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                        </div>
+                            
+                        <!--FIRST STEP-->
+                        <div class="tab">
+                            <div class="form-header">
+                                <i class="bi bi-1-circle display-5 pb-2 phase"></i>
+                                <h3 class="display-5">Create Account</h3>
                             </div>
                             
-                            <div class="tab">
-                                <div class="form-header d-flex flex-column justify-content-center align-items-center">
-                                    <i class="bi bi-1-circle display-5 pb-2 phase"></i>
-                                    <h3 class="display-5 pt-3 pb-4">Create Account</h3>
-                                </div>
-                                    <p>Fill <u>all</u> the data below.</p>
+                            <p>Fill <u>all</u> the data below.</p>
+                            
+                            <fieldset class="d-flex flex-column gap-3">
+                                <input name='userName' class="form-control" type="text" data-tipo='name' placeholder="Name" minlength="6" required>
+                                <input name='userMail' class="form-control" type="email" data-tipo='email' placeholder="Email" required>
+                                <div class="col  text-white">
+                                    <label class="form-label"><b>Gender</b></label>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rdo" checked>
+                                        <label class="form-check-label">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rdo">
+                                        <label class="form-check-label">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="rdo" checked>
+                                        <label class="form-check-label">Other</label>
+                                    </div>
+                                </div>                   
+                                <input type="date" id='age' class="form-control" name='userAge' data-tipo='age' placeholder="Age" required>
+                                <input name='userPwd' class="form-control" type="password" placeholder="Password" pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$" 
+                                title="Senha requer no mínimo uma letra, um número e ser maior que 6 caracteres." required>
                                 
-                                <fieldset>
-                                    <label class="h5">Account Info</label>
-                                    
-                                    <div class="col-md-12">
-                                        <input class="form-control" type="text" name="name" minlength="5" maxlength="35" placeholder="Full Name" required>
-                                        <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
-                                        <input class="form-control" type="password" name="password" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                                        title="Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character">
-                                        <div class="col-md-12 mt-3">
-                                            <label class="mb-3 mr-1" for="gender">Gender: </label>
-                                            <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off">
-                                            <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
-                                            <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off">
-                                            <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
-                                            <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off">
-                                            <label class="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
-                                        </div>
-                                    </div>
-                                </fieldset>                                                              
+                            </fieldset>                                                
+                        </div>
+
+
+                        <!--SECOND STEP-->
+                        <div class="tab">
+                            <div class="form-header">
+                                <i class="bi bi-2-circle display-5 pb-2 phase"></i>
+                                <h3 class="display-5">Address Info</h3>
                             </div>
 
-                            <div class="tab">
-                                <div class="form-header d-flex flex-column justify-content-center align-items-center">
-                                    <i class="bi bi-2-circle display-5 pb-2 phase"></i>
-                                    <h3 class="display-5 pt-3 pb-4">Address Info</h3>
+                            <p>Fill <u>all</u> the data below.</p>
+
+                            <fieldset class="d-flex flex-column gap-3">
+                                <input name='userZip' class="form-control" type="text" placeholder="Cep code" required>
+                                <input name='userCountry' class="form-control" type="text" placeholder="Country" required>
+                                <input name='userCity' class="form-control" type="text" placeholder="City" required>
+                                <input name='userAddress' class="form-control" type="text" placeholder="Address Line" required>
+                                <div class="form-check mt-2">
+                                    <input name='confirmData' class="form-check-input" type="checkbox" required>
+                                    <label class="form-check-label text-white">I confirm that all data are correct</label>
                                 </div>
-                                <fieldset class="pt-2">
-                                    <label class="h5">Address Info</label>
-                                    <div class="col-md-12">
-                                        <input class="form-control" type="text" name="zip" placeholder="Zip code">
-                                        <input class="form-control" type="text" name="city" placeholder="City">
-                                        <input class="form-control" type="text" name="address" placeholder="Address Line">
-                                        <input class="form-control" type="text" name="country" placeholder="Country">
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" value="" id="confirmData">
-                                            <label class="form-check-label">I confirm that all data are correct</label>
-                                            <!-- <div class="invalid-feedback">Please confirm that the entered data are all correct!</div> -->
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </div>
+                            </fieldset>
+                        </div>
                         
-                            <div class="tab">
-                                <div class="form-header d-flex flex-column justify-content-center align-items-center">
-                                    <i class="bi bi-3-circle display-5 pb-2 phase"></i>
-                                    <h3 class="display-5 pt-3 pb-4">Payment Details</h3>
-                                </div>
-                                <fieldset class="pt-3">
-                                    <label class="h5">Card Info</label>
-                                    
-                                    <div class="col-md-12">
-                                        <select class="form-select mt-3 required">
-                                            <option selected disabled value="">Card Type</option>
-                                            <option value="visa">Visa</option>
-                                            <option value="master">MasterCard</option>
-                                            <option value="american">American Express</option>
-                                            <option value="nubank">Nubank</option>
-                                        </select>
-                                        <input class="form-control" type="text" name="cardNum" placeholder="Card number" required>
-                                        <input class="form-control" type="text" name="cardExp" placeholder="Expiration" required>
-                                        <input class="form-control" type="text" name="cardCVV" placeholder="CVV" maxlenght="3" required>
-                                        <div class="form-check mt-2">
-                                            <input class="form-check-input" type="checkbox" value="" id="saveInfo">
-                                            <label class="form-check-label">Save my information for future payments!</label>
-                                        </div>
-                                    </div>
-                                </fieldset>
+
+                            <!--THIRD STEP-->
+                        <div class="tab">
+                            <div class="form-header">
+                                <i class="bi bi-3-circle display-5 pb-2 phase"></i>
+                                <h3 class="display-5">Payment Details</h3>
                             </div>
 
-                            <div class="tab">
-                                <div class="form-header d-flex flex-column justify-content-center align-items-center">
-                                    <i class="bi bi-4-circle display-5 pb-2 phase"></i>
-                                    <h3 class="display-5 pt-3 pb-4">Knowledge Check</h3>
+                            <p>Fill <u>all</u> the data below.</p>
+
+                            <fieldset class="d-flex flex-column gap-3">
+                                <select name='cardType' class="form-select mt-3 " >
+                                    <option selected disabled value="">Card Type</option>
+                                    <option value="visa">Visa</option>
+                                    <option value="master">MasterCard</option>
+                                    <option value="american">American Express</option>
+                                    <option value="nubank">Nubank</option>
+                                </select>
+                                <input name='cardNum' class="form-control" type="text" id="cardNum" placeholder="Card number" required>
+                                <input name='cardExp' class="form-control" type="text" id="cardExp" placeholder="Expiration" required>
+                                <input name='cardCvv' class="form-control" type="text" id="cardCVV" placeholder="CVV" required>
+                                <div class="form-check mt-2">
+                                    <input name="cardSave" class="form-check-input" type="checkbox" value="">
+                                        <label class="form-check-label text-white">Save my information for future payments!</label>
                                 </div>
-                                <fieldset class="pt-4">
-                                    <label class="h5">Programming</label>
-                                    
-                                    <div class="col-md-12">
-                                        <select class="form-select mt-3">
-                                            <option selected disabled value="">Specialization</option>
-                                            <option value="front">Front-End Web Developer</option>
-                                            <option value="back">Back-End Web Developer</option>
-                                            <option value="full">Fullstack Web developer</option>
-                                            <option value="full">Data Server</option>
-                                            <option value="full">DevOps</option>
-                                        </select>
-                                        <div class="col-md-12 mt-3 d-flex flex-column">
-                                            <label for="formControlRange">Front-end</label>
-                                            <input type="range" class="form-range" value="" name="html">
-                                        </div>
-                                        <div class="col-md-12 mt-3 d-flex flex-column">
-                                            <label for="formControlRange">Back-end</label>
-                                            <input type="range" class="form-range" value="" name="css">
-                                        </div>
-                                        <div class="col-md-12 mt-3 d-flex flex-column">
-                                            <label for="formControlRange">Data Server</label>
-                                            <input type="range" class="form-range" value="" name="javascript">
-                                        </div>
-                                        <div class="col-md-12 mt-3 d-flex flex-column">
-                                            <label for="formControlRange">Cyber Security</label>
-                                            <input type="range" class="form-range" value="" name="javascript">
-                                        </div>
-                                    </div>
-                                        
-                                </fieldset>
-                            </div>
-                            <div class="form-button mt-4 d-flex justify-content-center gap-3">
-                                <button id="btnPrev" type="button" onclick="nextPrev(-1)" class="btn btn-light text-dark shadow">Return</button>
-                                <button id="btnNext" type="button" onclick="nextPrev(1)" class="btn btn-light text-dark shadow">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+                            </fieldset>
+                        </div>
+                        
+                        <div class="form-button mt-5 d-flex justify-content-center gap-3">
+                            <button id="btnPrev" type="button" onclick="nextPrev(-1)" class="btn btn-lg btn-light text-dark shadow">Return</button>
+                            <button id="btnNext" type="submit" onclick="nextPrev(1)" class="btn btn-lg btn-light text-dark shadow">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -154,5 +128,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="validation.js"></script>
 </body>
 </html>

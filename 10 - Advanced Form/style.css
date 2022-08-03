@@ -42,7 +42,21 @@ html, body {
 
 
 
-.form-items {
+h3 {
+    padding-top: 16px;
+    padding-bottom: 24px;
+}   
+
+.form-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#form-items {
     background-color: #6775eb;
 }
 
@@ -71,7 +85,7 @@ html, body {
     padding: 60px;
 }
 
-.form-content .form-items {
+.form-content #form-items {
     border: 3px solid #fff;
     padding: 40px;
     display: inline-block;
@@ -99,6 +113,8 @@ html, body {
     margin-bottom: 30px;
 }
 
+
+
 .phase{
     color: #fff;
     display: flex;
@@ -115,25 +131,9 @@ html, body {
     margin-bottom: 30px;
 }
 
-.form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
-    color: #fff;
-}
 
-.form-content input[type=text], .form-content input[type=password], .form-content input[type=email], .form-content select {
-    width: 100%;
-    padding: 9px 20px;
-    text-align: left;
-    border: 0;
-    outline: 0;
-    border-radius: 6px;
-    background-color: #fff;
-    font-size: 15px;
-    font-weight: 300;
-    color: #8D8D8D;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    margin-top: 16px;
-}
+
+
 
 .form-content textarea {
     position: static !important;
@@ -191,9 +191,7 @@ html, body {
     background-color: #ebebeb;
 }
 
-
-
-
-
-
+.input-invalid {
+    border: 2px solid red;
+}
 
