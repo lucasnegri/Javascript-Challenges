@@ -21,7 +21,6 @@ function showTab(n) {
     document.getElementById("btnNext").innerHTML = "Next";
     }
   // ... and run a function that displays the correct step indicator:
-    fixStepIndicator(n)
 }
 
 function nextPrev(n) {
@@ -29,15 +28,16 @@ function nextPrev(n) {
     var x = document.getElementsByClassName("tab");
     x[currentTab].style.display = "none";
     currentTab = currentTab + n;
-
+ 
     // if you have reached the end of the form... :
     if (currentTab >= x.length) {
     //...the form gets submitted:
         document.getElementById("myForm").submit();
         return false;
-    }
-  // Otherwise, display the correct tab:
+    } 
+    // Otherwise, display the correct tab:
     showTab(currentTab);
+    
 }
 
 

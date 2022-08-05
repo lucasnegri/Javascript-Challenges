@@ -24,9 +24,9 @@
                         <form id="myForm" class="needs-validation">
                         
                         <!--STEP BAR-->
-                        <div class="d-flex justify-content-center mb-5 gap-3">
+                        <div class="d-flex justify-content-center mb-4 gap-4">
                             <span class="step"></span>
-                            <span class="step"></span>
+                            <span class="step"></span>  
                             <span class="step"></span>
                         </div>
                             
@@ -34,15 +34,14 @@
                         <div class="tab">
                             <div class="form-header">
                                 <i class="bi bi-1-circle display-5 pb-2 phase"></i>
-                                <h3 class="display-5">Create Account</h3>
+                                <h3 class="display-5">Personal Info</h3>
                             </div>
                             
                             <p>Fill <u>all</u> the data below.</p>
                             
                             <fieldset class="d-flex flex-column gap-3">
                                 <input name='userName' class="form-control" type="text" data-tipo='name' placeholder="Name" minlength="6" required>
-                                <input name='userMail' class="form-control" type="email" data-tipo='email' placeholder="Email" required>
-                                <div class="col  text-white">
+                                <div class="col text-white">
                                     <label class="form-label"><b>Gender</b></label>
                                     <br>
                                     <div class="form-check form-check-inline">
@@ -58,10 +57,8 @@
                                         <label class="form-check-label">Other</label>
                                     </div>
                                 </div>                   
-                                <input type="date" id='age' class="form-control" name='userAge' data-tipo='age' placeholder="Age" required>
-                                <input name='userPwd' class="form-control" type="password" placeholder="Password" pattern="^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)[0-9a-zA-Z]{6,}$" 
-                                title="Senha requer no mínimo uma letra, um número e ser maior que 6 caracteres." required>
-                                
+                                <input name='userMail' class="form-control" type="email" data-tipo='email' placeholder="Email" required>
+                                <input type="date" id='age' class="form-control" name='userAge' data-tipo='age' max-lenght="8" placeholder="Age" required>
                             </fieldset>                                                
                         </div>
 
@@ -76,10 +73,16 @@
                             <p>Fill <u>all</u> the data below.</p>
 
                             <fieldset class="d-flex flex-column gap-3">
-                                <input name='userZip' class="form-control" type="text" placeholder="Cep code" required>
-                                <input name='userCountry' class="form-control" type="text" placeholder="Country" required>
-                                <input name='userCity' class="form-control" type="text" placeholder="City" required>
-                                <input name='userAddress' class="form-control" type="text" placeholder="Address Line" required>
+                                <input name='userZip' class="form-control" data-tipo="cep" type="text" placeholder="Cep code" pattern ="[\d]{5}-?[\d]{3}" required>
+                                <input name='userAddress' class="form-control" data-tipo="address" type="text" placeholder="Address Line" required>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input name='userCity' class="form-control" data-tipo="city" type="text" placeholder="City" required>
+                                    </div>
+                                    <div class="col">
+                                        <input name='userCountry' class="form-control" data-tipo="state" type="text" placeholder="Country" required>
+                                    </div>
+                                </div>
                                 <div class="form-check mt-2">
                                     <input name='confirmData' class="form-check-input" type="checkbox" required>
                                     <label class="form-check-label text-white">I confirm that all data are correct</label>
@@ -94,8 +97,6 @@
                                 <i class="bi bi-3-circle display-5 pb-2 phase"></i>
                                 <h3 class="display-5">Payment Details</h3>
                             </div>
-
-                            <p>Fill <u>all</u> the data below.</p>
 
                             <fieldset class="d-flex flex-column gap-3">
                                 <select name='cardType' class="form-select mt-3 " >
@@ -115,9 +116,9 @@
                             </fieldset>
                         </div>
                         
-                        <div class="form-button mt-5 d-flex justify-content-center gap-3">
+                        <div class="form-button mt-3 d-flex justify-content-center gap-3">
                             <button id="btnPrev" type="button" onclick="nextPrev(-1)" class="btn btn-lg btn-light text-dark shadow">Return</button>
-                            <button id="btnNext" type="submit" onclick="nextPrev(1)" class="btn btn-lg btn-light text-dark shadow">Submit</button>
+                            <button id="btnNext" type="submit" onclick="nextPrev(1)" disabled class="btn btn-lg btn-light text-dark shadow">Submit</button>
                         </div>
                     </form>
                 </div>
