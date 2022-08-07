@@ -73,14 +73,14 @@
                             <p>Fill <u>all</u> the data below.</p>
 
                             <fieldset class="d-flex flex-column gap-3">
-                                <input name='userZip' class="form-control" data-tipo="cep" type="text" placeholder="Cep code" pattern ="[\d]{5}-?[\d]{3}" required>
-                                <input name='userAddress' class="form-control" data-tipo="address" type="text" placeholder="Address Line" required>
+                                <input name='userZip' class="form-control" data-tipo="cep" type="text" id="userZip" placeholder="Cep code" max-lenght="9" pattern ="[\d]{5}-?[\d]{3}" required>
+                                <input name='userAddress' class="form-control" data-tipo="address" type="text" id="userAddress" placeholder="Address Line" required>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <input name='userCity' class="form-control" data-tipo="city" type="text" placeholder="City" required>
+                                        <input name='userCity' class="form-control" data-tipo="city" type="text" id="userCity" placeholder="City" required>
                                     </div>
                                     <div class="col">
-                                        <input name='userCountry' class="form-control" data-tipo="state" type="text" placeholder="Country" required>
+                                        <input name='userCountry' class="form-control" data-tipo="state" type="text" id="userCountry" placeholder="Country" required>
                                     </div>
                                 </div>
                                 <div class="form-check mt-2">
@@ -108,7 +108,7 @@
                                 </select>
                                 <input name='cardNum' class="form-control" type="text" id="cardNum" placeholder="Card number" required>
                                 <input name='cardExp' class="form-control" type="text" id="cardExp" placeholder="Expiration" required>
-                                <input name='cardCvv' class="form-control" type="text" id="cardCVV" placeholder="CVV" required>
+                                <input name='cardCvv' class="form-control" type="text" id="cardCvv" placeholder="CVV" max-lenght="3" required>
                                 <div class="form-check mt-2">
                                     <input name="cardSave" class="form-check-input" type="checkbox" value="">
                                         <label class="form-check-label text-white">Save my information for future payments!</label>
@@ -129,5 +129,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="inputMask/cleave.js"></script>
+    <script src="inputMask/newMasks.js"></script>
 </body>
 </html>
