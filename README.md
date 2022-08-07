@@ -9,8 +9,9 @@ Here is the Live Version of the projects :
 | Calculator            | [Try](https://codepen.io/lucasnegri/pen/eYMvrJP)      | 
 | RockPaperScissor      | [Try](https://codepen.io/lucasnegri/pen/yLKMjVq)      | 
 | Flex Image Panel      | [Try](https://codepen.io/lucasnegri/pen/wvmJjpp)      | 
-| Temperature Conversion| [Try](https://codepen.io/lucasnegri/pen/ExEWLEY)  | 
+| Temperature Conversion| [Try](https://codepen.io/lucasnegri/pen/ExEWLEY)      | 
 | Etch-a-Sketch         | [Try](https://codepen.io/lucasnegri/pen/KKoNXNz)      | 
+| Advanced Step Form    | [Try](https://codepen.io/lucasnegri/pen/OJvZqEM)      | 
 
 
 I got most of the exercises from The Odin Project, Foundation Course.
