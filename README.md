@@ -11,7 +11,8 @@ Here is the Live Version of the projects :
 | Flex Image Panel      | [Try](https://codepen.io/lucasnegri/pen/wvmJjpp)      | 
 | Temperature Conversion| [Try](https://codepen.io/lucasnegri/pen/ExEWLEY)      | 
 | Etch-a-Sketch         | [Try](https://codepen.io/lucasnegri/pen/KKoNXNz)      | 
-| Advanced Step Form    | [Try](https://codepen.io/lucasnegri/pen/OJvZqEM)      | 
+| Advanced Step Form    | [Try](https://codepen.io/lucasnegri/pen/OJvZqEM)      |
+| Library List          | [Try](https://codepen.io/lucasnegri/pen/OJZgdzY)      | 
 
 
 I got most of the exercises from The Odin Project, Foundation Course.
@@ -19,4 +20,3 @@ https://github.com/TheOdinProject/javascript-exercises#readme
 
 There is other exercises that i got from here, a 30day challenge JS Plan:
 https://github.com/wesbos/JavaScript30
-
