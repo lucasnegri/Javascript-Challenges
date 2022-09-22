@@ -1,0 +1,37 @@
+
+#header{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#logo {
+    display: flex;
+    height: 8em;
+    width: 8em;
+    position: relative;
+}
+
+#logo-write{
+    display: flex;
+    font-size: 5em;
+    font-family: 'Cormorant Garamond', serif;
+    position: relative;
+
+}
+
+#main_content{
+    position: relative;
+}
+
+#add_book{
+    background-color: rgb(190, 190, 190, 0.2);
+    border-radius: 5%;
+};
+
+tr{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5%;
+}
