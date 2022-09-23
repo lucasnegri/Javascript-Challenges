@@ -12,7 +12,9 @@ Here is the Live Version of the projects :
 | Temperature Conversion| [Try](https://codepen.io/lucasnegri/pen/ExEWLEY)      | 
 | Etch-a-Sketch         | [Try](https://codepen.io/lucasnegri/pen/KKoNXNz)      | 
 | Advanced Step Form    | [Try](https://codepen.io/lucasnegri/pen/OJvZqEM)      |
-| Library List          | [Try](https://codepen.io/lucasnegri/pen/OJZgdzY)      | 
+| Library List          | [Try](https://codepen.io/lucasnegri/pen/OJZgdzY)      |
+| Tic-Tac-Toe           | [Try](https://codepen.io/lucasnegri/pen/RwyLowL)      | 
+
 
 
 I got most of the exercises from The Odin Project, Foundation Course.
